@@ -1,0 +1,33 @@
+# Automated 3D Tracking & Drone Mapping Pipeline — config.yaml
+
+# Frame extraction settings
+frame_rate: 12              # frames per second to extract from video
+max_dim_px: 2048            # long edge resize for images; set 0 to keep native
+image_ext: jpg              # jpg|png
+jpg_quality: 95             # if jpg (qscale: 1-31, lower=better)
+
+# COLMAP options
+colmap:
+  use_gpu: true             # set false on CPU-only machines
+  feature_type: SIFT        # SIFT recommended for reliable tracking
+  sift_max_num_features: 12000
+  exhaustive_matcher: true  # set true for challenging clips; slower but more robust
+  vocab_tree_matcher: false # set true if you have vocab tree file
+  mapper_min_model_size: 20 # minimum images for a model
+  mapper_min_tri_angle: 1.5 # minimum triangulation angle (degrees)
+  mapper_multiple_models: false
+  undistort: true           # undistort images before dense reconstruction
+  dense_reconstruction: true # set false if you only want camera + sparse cloud
+  stereo_max_image_size: 2048
+
+# GPS priors (advanced, optional)
+prior:
+  use_gps: false            # true if you prepare GPS priors from DJI SRT
+  gps_sigma: 5.0            # uncertainty in meters
+
+# Blender import hints (documentation only)
+blender:
+  suppress_distortion_warnings: true
+  import_points_as_mesh: true
+  backend: "OpenGL"         # Use OpenGL, not Vulkan
+  proxy_size: "50%"         # 50% or 25% for smooth playback

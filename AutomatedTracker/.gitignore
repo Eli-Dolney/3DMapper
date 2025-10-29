@@ -1,0 +1,88 @@
+# Video files (input)
+02_videos/*.mp4
+02_videos/*.mov
+02_videos/*.MP4
+02_videos/*.MOV
+02_videos/*.avi
+02_videos/*.flv
+02_videos/*.mkv
+
+# Generated scenes and reconstructions (large output files)
+04_scenes/*/
+04_scenes/**/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# Blender
+*.blend1
+*.blend2
+*.blend~
+*.blend.bak
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.lnk
+
+# Logs
+*.log
+logs/
+
+# Large files (cache, databases)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Node (if using npm scripts in future)
+node_modules/
+package-lock.json
+
+# Yarn
+yarn.lock
+
+# Keep example/template files
+!05_scripts/
+!03_documentation/
+!requirements.txt
+!README.md

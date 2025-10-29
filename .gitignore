@@ -1,0 +1,71 @@
+# ====================
+# 3D Pipeline .gitignore
+# ====================
+
+# ========== VIDEO & EXTRACTED FRAMES ==========
+02_videos/*.mp4
+02_videos/*.mov
+02_videos/*.avi
+02_videos/*.flv
+02_videos/*.mkv
+02_videos/*.MP4
+02_videos/*.MOV
+
+# ========== GENERATED SCENE OUTPUTS (Keep structure, exclude data) ==========
+04_scenes/*/images/
+04_scenes/*/database.db
+04_scenes/*/sparse/
+04_scenes/*/undistorted/images/
+04_scenes/*/undistorted/stereo/
+04_scenes/*/dense/
+
+# ========== COLMAP & FFMPEG BINARIES ==========
+01_colmap/
+03_ffmpeg/
+
+# ========== LOGS & TEMPORARY FILES ==========
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# ========== OS-SPECIFIC ==========
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.pyc
+__pycache__/
+
+# ========== PYTHON ENVIRONMENT ==========
+venv/
+env/
+ENV/
+.env
+.venv
+
+# ========== NODE & NPM ==========
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ========== BUILD & DIST ==========
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# ========== LARGE BINARY FILES ==========
+*.ply
+*.PLY
+*.stl
+*.STL
+*.obj
+*.fbx
+*.gltf
+
+# ========== IDE FILES ==========
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
