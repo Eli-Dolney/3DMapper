@@ -2,6 +2,18 @@
 # 3D Pipeline .gitignore
 # ====================
 
+# ========== VIDEO FILES (ROOT & VIDEOS DIR) ==========
+*.mp4
+*.mov
+*.avi
+*.flv
+*.mkv
+*.MP4
+*.MOV
+DJI_*.MP4
+IMG_*.MOV
+test.mp4
+
 # ========== VIDEO & EXTRACTED FRAMES ==========
 02_videos/*.mp4
 02_videos/*.mov
